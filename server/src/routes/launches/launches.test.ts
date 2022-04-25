@@ -1,9 +1,11 @@
 import app from '../../app';
 import { connect, disconnect } from '../../services/mongo';
 import request from 'supertest';
+import { loadPlanets } from '../../models/planets.model';
 
 beforeAll(async () => {
 	await connect();
+	await loadPlanets();
 });
 
 afterAll(async () => {
