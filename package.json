@@ -8,7 +8,8 @@
 		"server": "npm start --prefix server",
 		"client": "npm start --prefix client",
 		"start": "concurrently 'npm:server' 'npm:client'",
-		"deploy": "concurrently 'npm run build --prefix client' 'npm run build --prefix server'"
+		"deploy": "concurrently 'npm run build --prefix client' 'npm run build --prefix server'",
+		"test": "npm test --prefix server && npm test --prefix client"
 	},
 	"keywords": [],
 	"author": "",
